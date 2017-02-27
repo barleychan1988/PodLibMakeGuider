@@ -17,7 +17,7 @@ CocoaPods应该是iOS最常用最有名的类库管理工具了，上述两个�
 ##创建功能代码库
 创建仓库主要是为了保存此次需要共享的Pod库，仓库名称必须与Pod库名称一致。创建github库过程在此不做叙述，
 创建的时候需要选取license。
-<p><img src="http://photo-zw.oss-cn-shanghai.aliyuncs.com/%E6%97%A0%E6%A0%87%E9%A2%98.png?Expires=1488165077&OSSAccessKeyId=TMP.AQE6sl7X7Fm--JQ7K-nXM58saIyaH0LXeMg1MHp6o4hkikLYSN75x48SPX7VADAtAhRVqGoHN_1K9v7NNsCX8fBuwQ7_bgIVAPWEFrPWDrEtoF43onbrub-Z0kVa&Signature=XXiud2vS9f%2BHK9xx1BCv8jqNYb0%3D" alt=""><br>
+<p><img src="http://pan.baidu.com/s/1c6CZc6" width="712" height="420" alt=""><br>
 </p>
 Clone 仓库<br/>
 通过命令```git clone https://github.com/EadkennyChan/testPodLib.git```下载到本地，然后在相应目录下加入功能代码
@@ -95,7 +95,7 @@ $ pod trunk register [邮箱] '[name]' --description='[mac]‘
 ```javascript
 [!] Please verify the session by clicking the link in the verification email that has been sent to youmail@gmail.com
 ```
-去邮箱点击验证链接
+去邮箱点击验证链接<br>
 提交pods
 ```
 pod trunk push testPodLib.podspec
