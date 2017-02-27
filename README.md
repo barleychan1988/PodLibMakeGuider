@@ -1,6 +1,6 @@
 #<center>CocoaPods Lib 开发</center>
 ##CocoaPods是什么？
-当你开发iOS应用时，会经常使用到很多第三方开源类库，比如JSONKit，AFNetWorking等等。可能某个类库又用到其他类库，
+<p>当你开发iOS应用时，会经常使用到很多第三方开源类库，比如JSONKit，AFNetWorking等等。可能某个类库又用到其他类库，
 所以要使用它，必须得另外下载其他类库，而其他类库又用到其他类库，“子子孙孙无穷尽也”，这也许是比较特殊的情况。
 总之小编的意思就是，手动一个个去下载所需类库十分麻烦。另外一种常见情况是，你项目中用到的类库有更新，你必须得
 重新下载新版本，重新加入到项目中，十分麻烦。如果能有什么工具能解决这些恼人的问题，那将“善莫大焉”。
@@ -13,11 +13,12 @@ CocoaPods应该是iOS最常用最有名的类库管理工具了，上述两个�
 
 如果我们也想将自己写的组件或库开源出去，让别人也可以通过pod install命令安装自己的框架该怎么做呢？下面，我就教
 大家一步一步的将自己的pods发布到CocoaPods 中。
-
+</p>
 ##创建功能代码库
 创建仓库主要是为了保存此次需要共享的Pod库，仓库名称必须与Pod库名称一致。创建github库过程在此不做叙述，
 创建的时候需要选取license。
-![1](http://photo-zw.oss-cn-shanghai.aliyuncs.com/%E6%97%A0%E6%A0%87%E9%A2%98.png?Expires=1488165077&OSSAccessKeyId=TMP.AQE6sl7X7Fm--JQ7K-nXM58saIyaH0LXeMg1MHp6o4hkikLYSN75x48SPX7VADAtAhRVqGoHN_1K9v7NNsCX8fBuwQ7_bgIVAPWEFrPWDrEtoF43onbrub-Z0kVa&Signature=XXiud2vS9f%2BHK9xx1BCv8jqNYb0%3D)
+<p><img src="http://photo-zw.oss-cn-shanghai.aliyuncs.com/%E6%97%A0%E6%A0%87%E9%A2%98.png?Expires=1488165077&OSSAccessKeyId=TMP.AQE6sl7X7Fm--JQ7K-nXM58saIyaH0LXeMg1MHp6o4hkikLYSN75x48SPX7VADAtAhRVqGoHN_1K9v7NNsCX8fBuwQ7_bgIVAPWEFrPWDrEtoF43onbrub-Z0kVa&Signature=XXiud2vS9f%2BHK9xx1BCv8jqNYb0%3D" width= ><br>
+</p>
 Clone 仓库<br/>
 通过命令```git clone https://github.com/EadkennyChan/testPodLib.git```下载到本地，然后在相应目录下加入功能代码
 提交源码<br/>
@@ -73,9 +74,9 @@ Pod::Spec.new do |s|
   s.framework = "UIKit", "Foundation"
 end
 ```
-在上面指定的文件目录下添加相应功能的源码和资源<br/>
-提交资源和源码到github仓库<br/>
-验证podspec文件是否正确<br/>
+在上面指定的文件目录下添加相应功能的源码和资源<br>
+提交资源和源码到github仓库<br>
+验证podspec文件是否正确<br>
 ```
 pod spec lint YourProject.podspec
 ```
@@ -88,14 +89,17 @@ testPodLib.podspec passed validation.
 ##提交Pod Trunk
 注册Trunk
 ```
-$ pod trunk register [邮箱] '[name]' --description='[mac]'```
+$ pod trunk register [邮箱] '[name]' --description='[mac]
+'```
 执行成功后会显示
 ```javascript
-[!] Please verify the session by clicking the link in the verification email that has been sent to youmail@gmail.com```
+[!] Please verify the session by clicking the link in the verification email that has been sent to youmail@gmail.com
+```
 去邮箱点击验证链接
 提交pods
 ```
-pod trunk push testPodLib.podspec```
+pod trunk push testPodLib.podspec
+```
 注意：如果你没有翻墙，可能会需要的时候比较久，我用了大概2分钟提交完毕
 成功后会显示:<br/>
 ```javascript
@@ -104,8 +108,9 @@ Updating spec repo `master`
 -Data URL: https://raw.githubusercontent.com/CocoaPods/Specs/xxx/ testPodLib.podspec.json
   - Log messages:
     - May 31st, 21:54: Push for ` testPodLib 0.1.0' initiated.
-- May 31st, 21:54: Push for `testPodLib 0.1.0' has been pushed (2.903283301 s).```
-ok。到此就成功了。<br/>
+- May 31st, 21:54: Push for `testPodLib 0.1.0' has been pushed (2.903283301 s).
+```
+ok。到此就成功了。<br>
 ```
 pod trunk me
 ```
